@@ -1,0 +1,65 @@
+/* Estilo para la barra de menú */
+.navbar {
+    background-color: #007bff; /* Color de fondo de la barra de menú (azul) */
+    overflow: hidden;
+}
+
+/* Estilo para el elemento de la barra de menú */
+.navbar a {
+    float: left;
+    color: white; /* Color de texto de los elementos del menú */
+    font-family: 'Arial', sans-serif; /* Fuente de las letras */
+    font-size: 16px; /* Tamaño de fuente */
+    text-align: left;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Cambia el color de fondo del elemento activo */
+.navbar a:hover {
+    background-color: #0056b3; /* Color de fondo en estado de hover (azul más oscuro) */
+}
+
+/* Estilos para el contenido */
+.container {
+    margin: 20px;
+    text-align: center;
+}
+
+.titulo {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.subtitulo {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Estilo para el video */
+.video-container {
+    max-width: 100%;
+    margin: 20px auto;
+}
+
+/* Estilos para los botones */
+.botones-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto;
+}
+
+.boton {
+    background-color: #007bff;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background-color: #0056b3;
+}
