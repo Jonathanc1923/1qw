@@ -16,7 +16,7 @@ app.use('/static', express.static('static'));
 
 // Usuarios válidos (esto es solo un ejemplo, debes almacenar los usuarios de manera segura)
 const usuariosValidos = [
-  { correo: '1@gmail.com', contraseña: 'a1' }
+  { correo: 'digital1@gmail.com', contraseña: 'digital1' }
 ];
 
 app.get('/', (req, res) => {
