@@ -37,7 +37,9 @@ app.post('/inicioproyecto', (req, res) => {
     res.redirect('/inicioproyecto');
   } else {
     // Si las credenciales no son válidas, muestra un mensaje de error o redirige a otra página
+    res.redirect('/inicio');
     res.send('Credenciales incorrectas. Inténtalo de nuevo.');
+    
   }
 });
 
@@ -45,7 +47,7 @@ app.get('/inicioproyecto', (req, res) => {
   res.sendFile(__dirname + '/views/inicioproyecto.html');
 });
 
-app.get('/inicio.html', (req, res) => {
+app.get('/inicio', (req, res) => {
   res.sendFile(__dirname + '/views/inicio.html');
 });
 
