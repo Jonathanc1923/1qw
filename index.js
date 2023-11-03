@@ -38,7 +38,7 @@ app.post('/inicioproyecto', (req, res) => {
   } else {
     // Si las credenciales no son válidas, muestra un mensaje de error o redirige a otra página
     res.redirect('/inicio');
-    res.send('Credenciales incorrectas. Inténtalo de nuevo.');
+    res.send('Credenciales incorrectas. Inténtalo de nuevo. Solo instroduzca el correo y contraseña que el asesor le brindó');
     
   }
 });
@@ -60,6 +60,9 @@ app.get('/disenar-para-2', (req, res) => {
 });
 app.get('/disenar-para-3', (req, res) => {
   res.sendFile(__dirname + '/views/disenar-para-3.html');
+});
+app.get('/disenar-para-4', (req, res) => {
+  res.sendFile(__dirname + '/views/disenar-para-4.html');
 });
 
 app.listen(PORT, () => {

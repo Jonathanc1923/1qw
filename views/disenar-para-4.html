@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Selecciona el modelo para tu montaje</title>
+    <style>
+        /* Estilo para la barra de menú */
+    .navbar {
+        background-color: #007bff; /* Color de fondo de la barra de menú (azul) */
+        overflow: hidden;
+    }
+
+    /* Estilo para el elemento de la barra de menú */
+    .navbar a {
+        float: left;
+        color: white; /* Color de texto de los elementos del menú */
+        font-family: 'Arial', sans-serif; /* Fuente de las letras */
+        font-size: 16px; /* Tamaño de fuente */
+        text-align: left;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    /* Cambia el color de fondo del elemento activo */
+    .navbar a:hover {
+        background-color: #0056b3; /* Color de fondo en estado de hover (azul más oscuro) */
+    }
+        /* Estilos generales */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Contenedor para el título */
+        .title-container {
+            text-align: center;
+            background-color: #007bff;
+            padding: 10px;
+        }
+
+        /* Estilo para el título */
+        h1 {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            color: white;
+        }
+
+        /* Estilo para la galería */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px; /* Espacio alrededor de la galería */
+        }
+
+        /* Estilo para cada imagen */
+        .image-container {
+            position: relative;
+            margin: 10px; /* Espacio entre las imágenes */
+        }
+
+        .image-container img {
+            width: 180px;
+            height: 180px;
+        }
+
+        /* Estilo para el botón */
+        .image-button {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #007bff;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Estilo para dispositivos móviles */
+        @media (max-width: 768px) {
+            .image-container {
+                margin: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar">
+            <a href="/inicio">Inicio</a>
+            <a href="/inicioproyecto">Diseñar</a>
+        </div>
+    <div class="title-container">
+        <h1>Escoge la imagen para hacer el montaje</h1>
+    </div>
+    <div class="gallery">
+        <!-- JavaScript generará las imágenes del 1 al 70 -->
+    </div>
+    <script>
+        const gallery = document.querySelector('.gallery');
+
+        function redirectToPhotopea(imageUrl) {
+            const photopeaUrl = `https://www.photopea.com#%7B%22files%22%3A%5B%22${imageUrl}%22%5D%2C%22environment%22%3A%7B%7D%7D`;
+            window.location.href = photopeaUrl;
+        }
+
+        const imageUrls = [
+        "https://i.postimg.cc/kMLqDWsS/1.png",
+        "https://i.postimg.cc/brhgFC8b/2.png",
+        "https://i.postimg.cc/QxSm0Jz9/3.png",
+        "https://i.postimg.cc/767X98vw/4.png",
+        "https://i.postimg.cc/ZKJj8Mwz/5.png",
+        "https://i.postimg.cc/0yBfq2P9/6.png",
+        "https://i.postimg.cc/VvWgyqLh/7.png",
+        "https://i.postimg.cc/Cx1Ntfyv/8.png",
+        "https://i.postimg.cc/59BnFVqm/9.png",
+        "https://i.postimg.cc/GhMPkhBv/10.png",
+        "https://i.postimg.cc/KYTnSP05/11.png",
+        "https://i.postimg.cc/nhC4Tb7g/12.png",
+        "https://i.postimg.cc/gJq8rYFX/13.png",
+        "https://i.postimg.cc/FsFgdJK9/14.png",
+        "https://i.postimg.cc/zG6nctFB/15.png",
+        "https://i.postimg.cc/B6G2qjyf/16.png",
+        "https://i.postimg.cc/2ykvZPrH/17.png",
+        "https://i.postimg.cc/bNvkNc6r/18.png",
+        "https://i.postimg.cc/L8c1Tqmg/19.png",
+        "https://i.postimg.cc/rw04xG2L/20.png",
+        "https://i.postimg.cc/Pq18Ftq3/21.png",
+        "https://i.postimg.cc/wvHRCSy6/22.png",
+
+
+        ];
+
+        for (let i = 0; i < imageUrls.length; i++) {
+            const imgContainer = document.createElement('div');
+            imgContainer.classList.add('image-container');
+
+            const img = document.createElement('img');
+            img.src = `static/de a 4/muestra/${i + 1}.png`;
+            img.alt = `Imagen ${i + 1}`;
+
+            const button = document.createElement('button');
+            button.classList.add('image-button');
+            button.textContent = 'Hacer montaje';
+
+            button.onclick = function () {
+                redirectToPhotopea(imageUrls[i]);
+            };
+
+            imgContainer.appendChild(img);
+            imgContainer.appendChild(button);
+            gallery.appendChild(imgContainer);
+        }
+    </script>
+</body>
+</html>
