@@ -64,6 +64,9 @@ app.get('/disenar-para-3', (req, res) => {
 app.get('/disenar-para-4', (req, res) => {
   res.sendFile(__dirname + '/views/disenar-para-4.html');
 });
+app.get('/postales', (req, res) => {
+  res.sendFile(__dirname + '/views/postales.html');
+});
 
 app.listen(PORT, () => {
   console.log(`Servidor Node.js escuchando en el puerto ${PORT}`);
